@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Build_It_Bigger.iml" filepath="$PROJECT_DIR$/Build_It_Bigger.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokeandroid/jokeandroid.iml" filepath="$PROJECT_DIR$/jokeandroid/jokeandroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/libjoke/libjoke.iml" filepath="$PROJECT_DIR$/libjoke/libjoke.iml" />
     </modules>
   </component>
