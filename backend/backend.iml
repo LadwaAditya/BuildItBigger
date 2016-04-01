@@ -12,6 +12,15 @@
         <option name="BUILDABLE" value="true" />
       </configuration>
     </facet>
+    <facet type="app-engine-gradle" name="App Engine Gradle">
+      <configuration>
+        <option name="HTTP_ADDRESS" value="localhost" />
+        <option name="HTTP_PORT" value="8080" />
+        <option name="WAR_DIR" value="E:\Aditya\WorkSpace\Android_Studio\Build_It_Bigger\backend\build\exploded-app" />
+        <option name="WEB_APP_DIR" value="E:\Aditya\WorkSpace\Android_Studio\Build_It_Bigger\backend\src\main\webapp" />
+        <option name="APPENGINE_SDKROOT" value="C:\Users\ladwa\.gradle\appengine-sdk\appengine-java-sdk-1.9.28" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build/classes/main" />
@@ -27,12 +36,15 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/functionalTest/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="libjoke" exported="" />
     <orderEntry type="library" exported="" name="appengine-endpoints-1.9.28" level="project" />
     <orderEntry type="library" exported="" name="appengine-endpoints-deps-1.9.28" level="project" />
     <orderEntry type="library" exported="" name="servlet-api-2.5" level="project" />
     <orderEntry type="library" exported="" name="appengine-api-1.0-sdk-1.9.28" level="project" />
+    <orderEntry type="library" exported="" name="backend.backend-android-endpoints" level="project" />
   </component>
 </module>
