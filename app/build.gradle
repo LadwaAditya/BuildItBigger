@@ -28,7 +28,8 @@ android {
 
 dependencies {
     // Added for AdMob
-    compile 'com.google.android.gms:play-services:8.4.0'
     compile project(':jokeandroid')
     compile project(':libjoke')
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile project(path: ':backend', configuration: 'android-endpoints')
 }
