@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger.endpoint;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.os.AsyncTask;
