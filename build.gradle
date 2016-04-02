@@ -17,3 +17,15 @@ allprojects {
         jcenter()
     }
 }
+
+// Task to run appengine perform tests and stop appengine server!
+task runAppEngineAndTest(dependsOn: [":backend:appengineRun", ":app:connectedCheck", ":backend:appengineStop"]) {
+    project(":backend").afterEvaluate { backend ->
+        backend.extensions.appengine.daemon = true
+    }
+
+
+    tasks.getByPath(':app:connectedCheck').mustRunAfter ':backend:appengineRun'
+    tasks.getByPath(':backend:appengineStop').mustRunAfter ':app:connectedCheck'
+  
+}
