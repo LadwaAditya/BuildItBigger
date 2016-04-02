@@ -12,7 +12,7 @@
         <option name="HTTP_PORT" value="8080" />
         <option name="WAR_DIR" value="E:\Aditya\WorkSpace\Android_Studio\Build_It_Bigger\backend\build\exploded-app" />
         <option name="WEB_APP_DIR" value="E:\Aditya\WorkSpace\Android_Studio\Build_It_Bigger\backend\src\main\webapp" />
-        <option name="APPENGINE_SDKROOT" value="C:\Users\ladwa\.gradle\appengine-sdk\appengine-java-sdk-1.9.28" />
+        <option name="APPENGINE_SDKROOT" value="C:\Users\Aditya\.gradle\appengine-sdk\appengine-java-sdk-1.9.28" />
       </configuration>
     </facet>
     <facet type="java-gradle" name="Java-Gradle">
