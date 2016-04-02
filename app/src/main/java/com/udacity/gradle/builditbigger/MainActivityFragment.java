@@ -36,7 +36,7 @@ public class MainActivityFragment extends Fragment {
 
 
         EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
-        endpointsAsyncTask.execute(new Pair<Context, String>(getActivity(), "Aditya Ladwa"));
+        endpointsAsyncTask.execute(getActivity());
         return root;
     }
 }

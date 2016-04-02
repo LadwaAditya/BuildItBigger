@@ -17,12 +17,14 @@ import java.io.IOException;
  * From google Source
  * https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
  */
-class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
+class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
+    private TaskListner mlistner = null;
+
 
     @Override
-    protected String doInBackground(Pair<Context, String>... params) {
+    protected String doInBackground(Context... params) {
         if (myApiService == null) {  // Only do this once
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
                     .setRootUrl("https://builditbigger-1268.appspot.com/_ah/api/");
@@ -30,11 +32,11 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
             myApiService = builder.build();
         }
 
-        context = params[0].first;
-        String name = params[0].second;
+        context = params[0];
+
 
         try {
-            return myApiService.sayHi(name).execute().getData();
+            return myApiService.sayHi("Aditya Ladwa").execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -42,11 +44,20 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
     @Override
     protected void onPostExecute(String result) {
-        handleResult(result);
+        if (null != mlistner)
+            this.mlistner.getTaskResult(result);
         Toast.makeText(context, result, Toast.LENGTH_SHORT).show();
     }
 
-    private String handleResult(String result) {
-        return result;
+
+    public interface TaskListner {
+        void getTaskResult(String result);
     }
+
+    public EndpointsAsyncTask setListner(TaskListner listner) {
+        this.mlistner = listner;
+        return this;
+    }
+
+
 }
