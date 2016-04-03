@@ -1,22 +1,12 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
-import com.example.jokeandroid.JokeActivity;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 
 public class MainActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -27,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
     @Override
@@ -52,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 
 
 }
