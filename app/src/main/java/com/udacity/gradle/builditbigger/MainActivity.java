@@ -9,21 +9,26 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.Joke;
 import com.example.jokeandroid.JokeActivity;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 
 public class MainActivity extends AppCompatActivity {
-    private ProgressBar progressBar;
+
+
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
+
     }
+
+
 
 
     @Override
@@ -48,21 +53,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        progressBar.setVisibility(View.VISIBLE);
-        Toast.makeText(this, "Retrieving jokes..... Plesase wait...", Toast.LENGTH_SHORT).show();
-        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
-        endpointsAsyncTask.setListner(new EndpointsAsyncTask.TaskListner() {
-            @Override
-            public void getTaskResult(String result) {
-                progressBar.setVisibility(View.GONE);
-                Intent intent = new Intent(MainActivity.this, JokeActivity.class);
-                intent.putExtra(Intent.EXTRA_TEXT, result);
-                startActivity(intent);
-            }
-        }).execute(this);
 
-    }
 
 
 }
