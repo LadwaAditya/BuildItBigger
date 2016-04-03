@@ -48,9 +48,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     protected void onPostExecute(String result) {
         if (null != mlistner)
             this.mlistner.getTaskResult(result);
-        Intent intent = new Intent(context, JokeActivity.class);
-        intent.putExtra(Intent.EXTRA_TEXT, result);
-        context.startActivity(intent);
+
     }
 
 
