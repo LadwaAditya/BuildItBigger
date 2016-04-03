@@ -1,12 +1,16 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.example.jokeandroid.JokeActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -14,7 +18,6 @@ import com.google.android.gms.ads.AdView;
  * Created by Aditya on 03-Apr-16.
  */
 public class MainActivityFragment extends Fragment {
-
 
 
     public MainActivityFragment() {
@@ -25,6 +28,7 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
         AdView mAdView;
+
 
         mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
@@ -38,4 +42,6 @@ public class MainActivityFragment extends Fragment {
 
         return root;
     }
+
+
 }
