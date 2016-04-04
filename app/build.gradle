@@ -47,8 +47,8 @@ dependencies {
     compile project(path: ':backend', configuration: 'android-endpoints')
     freeCompile 'com.google.android.gms:play-services:8.4.0'
     freeCompile 'com.google.android.gms:play-services-ads:8.4.0'
-    compile 'com.google.android.gms:play-services-auth:8.4.0'
-    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    freeCompile 'com.google.android.gms:play-services-auth:8.4.0'
+    freeCompile 'com.google.android.gms:play-services-gcm:8.4.0'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:support-v4:23.2.1'
 }
